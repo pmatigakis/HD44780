@@ -12,15 +12,9 @@ DigitalOut pin(PTD7);
 
 int main()
 {
-    data.output();
-    data = 0;
-    E = 0;
-    RS = 0;
-    RW = 0;
-
-    wait(1);
-
     display.init(LINES_2 | FONT_5BY8, DISPLAY_ON | CURSOR_VISIBLE | CHARACTER_BLINKING, INCREMENT);
+
+    display.clear();
 
     display.print("Hello");
     display.setCursorToPosition(1, 0);

@@ -196,5 +196,6 @@ void HD44780::toggleEnable()
 
 void HD44780::waitForCompletion()
 {
-    while((readStatus() && 0x80) == 0x80) {}
+    while(readStatus() & 0x80) {}
 }
+
